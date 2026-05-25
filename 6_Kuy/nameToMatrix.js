@@ -3,7 +3,6 @@
 function matrixfy(str) {
   if(!str) return 'name must be at least one letter'
   const size=Math.ceil(Math.sqrt(str.length))
-  let letterIndex = 0
   let matrix=Array.from({length:size},(_,i)=>Array.from({length:size},(_,j)=>  str[j+(i*size)]||'.' ))
   return matrix
 }
