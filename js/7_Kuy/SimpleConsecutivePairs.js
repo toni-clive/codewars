@@ -7,8 +7,7 @@ function pairs(ar){
   let c = 0
   for(let i =0;i<ar.length;i+=2){
     let [f,s] = [ar[i],ar[i+1]]
-    let res = (f+s)
-    if(res == Math.min(f,s)*2-1 || res == Math.max(f,s)*2-1) c++
+    if(Math.abs(f-s)==1) c++
   }
   return c
 };
