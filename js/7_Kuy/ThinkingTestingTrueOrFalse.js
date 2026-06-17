@@ -2,7 +2,16 @@
 // Tags 
 // Puzzles
 
+// function testit(n){
+//   let match = (n).toString(2).match(/1/g)
+//   return match?.length || 0
+// }
+
 function testit(n){
-  let match = (n).toString(2).match(/1/g)
-  return match?.length || 0
+  let count = 0
+  while (n){
+    n&= n-1
+    count++
+  } 
+  return count
 }
