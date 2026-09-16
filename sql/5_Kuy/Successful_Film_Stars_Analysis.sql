@@ -10,5 +10,5 @@ ON ac.actor_id = film_actor.actor_id GROUP BY ac.actor_id )
 
 SELECT a_count.actor_id, a_count.full_name,	a_count.f_count film_count FROM a_count
 WHERE a_count.actor_id NOT IN (SELECT actor_id FROM l_r)
-GROUP BY a_count.actor_id,a_count.full_name,	a_count.f_count HAVING f_count>=20
+AND f_count>=20
 ORDER BY a_count.f_count DESC,actor_id
