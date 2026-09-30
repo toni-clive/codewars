@@ -1,0 +1,5 @@
+-- https://www.codewars.com/kata/58112f8004adbbdb500004fe/train/sql
+
+SELECT 'EU' as location,* FROM eusales WHERE price > 50
+UNION ALL
+SELECT 'US' as location,* FROM ussales WHERE price > 50 ORDER BY location DESC, id
